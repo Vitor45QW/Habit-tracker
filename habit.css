@@ -1,0 +1,70 @@
+body {
+    background-color: #967BC9;
+    font-family: sans-serif, 'Yu-gothic';
+  }
+  
+  .habit-title {
+    color: white;
+    background-color: black;
+    border-radius: 420px;
+    max-width: 120px;
+    padding: 15px;
+  }
+  
+  .week-counter {
+      height: 350px;
+      width: 850px;
+      background-color: white;
+      display: flex;
+  }
+  
+  .check-neutral {
+    width: 50px;
+    height: 50px;
+    color: red;
+    background-color: white;
+    border: solid 1px black;
+  }
+  
+  .check-negative {
+     width: 50px;
+    height: 50px;
+    color: red;
+    background-color: red;
+    border: solid 1px red;
+  }
+  
+  .check-positive {
+    width: 50px;
+    height: 50px;
+    color: red;
+    background-color: green;
+    border: solid 1px white;
+  }
+  
+  .day-and-check {
+    text-align: center;
+    padding: 20px;
+      
+  }
+  
+  
+  
+  .maestry-container{
+      display: flex;
+      flex-direction: column;
+    margin: 19px;
+      text-align: center;
+      align-items: center;
+  }
+  
+  .red-light {
+      background-color: red;
+      height: 20px;
+       width: 30px;
+      border-radius: 120px;
+      align-items: center;
+      
+      
+  }
+  
