@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonDone.addEventListener("click", () =>{
         console.log("clicked");
         checkNegative.style.backgroundColor = 'green';
+        checkNegative.style.borderColor = 'green';
+
     })
 
     buttonUndone.addEventListener("click", () => {
         checkNegative.style.backgroundColor = 'red';
+        checkNegative.style.borderColor = 'red';
     })
 
 })

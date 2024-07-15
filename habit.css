@@ -1,70 +1,119 @@
 body {
-    background-color: #967BC9;
-    font-family: sans-serif, 'Yu-gothic';
-  }
-  
-  .habit-title {
-    color: white;
-    background-color: black;
-    border-radius: 420px;
-    max-width: 120px;
-    padding: 15px;
-  }
-  
-  .week-counter {
-      height: 350px;
-      width: 850px;
-      background-color: white;
-      display: flex;
-  }
-  
-  .check-neutral {
-    width: 50px;
-    height: 50px;
-    color: red;
-    background-color: white;
-    border: solid 1px black;
-  }
-  
-  .check-negative {
-     width: 50px;
-    height: 50px;
-    color: red;
-    background-color: red;
-    border: solid 1px red;
-  }
-  
-  .check-positive {
-    width: 50px;
-    height: 50px;
-    color: red;
-    background-color: green;
-    border: solid 1px white;
-  }
-  
-  .day-and-check {
-    text-align: center;
-    padding: 20px;
-      
-  }
-  
-  
-  
-  .maestry-container{
-      display: flex;
-      flex-direction: column;
-    margin: 19px;
-      text-align: center;
-      align-items: center;
-  }
-  
-  .red-light {
-      background-color: red;
-      height: 20px;
-       width: 30px;
-      border-radius: 120px;
-      align-items: center;
-      
-      
-  }
-  
+  background-color: #967BC9;
+  font-family: 'Yu Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.app-title h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.app-title h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.habit-title {
+  color: #fff;
+  background-color: #333;
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.week-counter {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.day-and-check {
+  text-align: center;
+}
+
+.day-and-check p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.check-neutral, .check-negative, .check-positive {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.check-neutral {
+  background-color: #fff;
+  border-color: #333;
+  color: #333;
+}
+
+.check-negative {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.check-positive {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.button-done, .button-undone {
+  display: block;
+  margin: 5px auto;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-done:hover, .button-undone:hover {
+  background-color: #555;
+}
+
+.maestry-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.maestry {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.red-light {
+  background-color: #e74c3c;
+  height: 20px;
+  width: 30px;
+  border-radius: 120px;
+  margin: 10px auto;
+}
