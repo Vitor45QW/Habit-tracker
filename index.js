@@ -1,21 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {   
+document.addEventListener("DOMContentLoaded", () => {
+    const startButton = document.querySelector('.start-button');
+    const endButton = document.querySelector('.end-button');  
+  
+  
+    startButton.addEventListener('click', () => {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0'); // Get hours (in 24-hour format) and pad with leading zero if necessary
+        const minutes = now.getMinutes().toString().padStart(2, '0'); // Get minutes and pad with leading zero if necessary
+        
+        const currentTime = `${hours}:${minutes}`;
+        
+        console.log('Start at:', currentTime);
 
-    console.log("don loaded")
-    const buttonDone = document.querySelector('.button-done');
-    const checkNegative = document.querySelector('.check-negative')
-
-    const buttonUndone = document.querySelector('.button-undone');
-
-    buttonDone.addEventListener("click", () =>{
-        console.log("clicked");
-        checkNegative.style.backgroundColor = 'green';
-        checkNegative.style.borderColor = 'green';
-
-    })
-
-    buttonUndone.addEventListener("click", () => {
-        checkNegative.style.backgroundColor = 'red';
-        checkNegative.style.borderColor = 'red';
-    })
-
-})
+        // You can use 'currentTime' variable here as needed (e.g., save to database, display on screen, etc.)
+        // Example: alert(`Clicked at ${currentTime
+    });
+      endButton.addEventListener('click', () => {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0'); // Get hours (in 24-hour format) and pad with leading zero if necessary
+        const minutes = now.getMinutes().toString().padStart(2, '0'); // Get minutes and pad with leading zero if necessary
+        
+        const currentTime = `${hours}:${minutes}`;
+        
+        console.log('End at:', currentTime);
+        
+   
+     
+    });
+    
+  
+  
+  
+  
+});
