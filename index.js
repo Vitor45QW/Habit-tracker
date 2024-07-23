@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.querySelector('.start-button');
     const endButton = document.querySelector('.end-button');  
   
+    const unfinished = document.querySelector('.unfinished');
+
+  
+          unfinished.addEventListener('click', () => {
+      console.log('unfinished working');
+            
+            const field = document.querySelector('.check-negative');
+            field.style.backgroundColor = 'orange';
+    })
+
+  
   
     startButton.addEventListener('click', () => {
         const now = new Date();
@@ -13,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
         startTime = `${hours}:${minutes}`;
         
+        const field = document.querySelector('.check-negative');
+        field.style.backgroundColor = 'yellow';
+      
         console.log('Start at:', startTime);
 
         // You can use 'currentTime' variable here as needed (e.g., save to database, display on screen, etc.)
@@ -31,9 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
             
         
            console.log(`you started at ${startTime} and finished at ${endTime}`);
-     
+    
+  const checkField = document.querySelector('.check-negative');
+checkField.style.backgroundColor = 'green';
+
+    
+        
     });
     
+
+  
+  
+});
     
 
   
