@@ -2,20 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   
     let startTime, endTime;
     
+    let doneCounter = document.querySelector(".done-counter");
+    let unfinishedCounter = document.querySelector('.unfinished-counter');
+    let notDone = document.querySelector('.not-done-counter');
+
     const startButton = document.querySelector('.start-button');
     const endButton = document.querySelector('.end-button');  
   
-    const unfinished = document.querySelector('.unfinished');
-
+const unfinishedButton = document.querySelector('.unfinished');
   
-          unfinished.addEventListener('click', () => {
-      console.log('unfinished working');
-            
-            const field = document.querySelector('.check-negative');
-            field.style.backgroundColor = 'orange';
-    })
-
-  
+  const notDoneButton = document.querySelector('.not-done');
   
     startButton.addEventListener('click', () => {
         const now = new Date();
@@ -24,13 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         startTime = `${hours}:${minutes}`;
         
-        const field = document.querySelector('.check-negative');
-        field.style.backgroundColor = 'yellow';
-      
         console.log('Start at:', startTime);
 
-        // You can use 'currentTime' variable here as needed (e.g., save to database, display on screen, etc.)
-        // Example: alert(`Clicked at ${currentTime
+       const field = document.querySelector('.check-negative');
+            field.style.backgroundColor = 'blue';
+            field.style.borderColor = 'blue';
     });
          
       endButton.addEventListener('click', () => {
@@ -45,20 +39,32 @@ document.addEventListener("DOMContentLoaded", () => {
             
         
            console.log(`you started at ${startTime} and finished at ${endTime}`);
-    
-  const checkField = document.querySelector('.check-negative');
-checkField.style.backgroundColor = 'green';
-
-    
+     
+        doneCounter.textContent = '1 terminado';
         
+         const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'green';
+            field.style.borderColor = 'green';
+        
+          
     });
     
-
-  
-  
-});
     
+  unfinishedButton.addEventListener('click', () => {
+                                    console.log('unfinished clicked');                                   
+  
+      const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'orange';
+            field.style.borderColor = 'orange';
+        
+    
+  })
+  
 
+  notDoneButton.addEventListener('click', () => {
+                                    console.log('not done clicked');
+    const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'darkred';
+            field.style.borderColor = 'darkred';
+        
+  })
   
   
 });
