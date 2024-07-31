@@ -1,70 +1,186 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
-    let startTime, endTime;
-    
-    let doneCounter = document.querySelector(".done-counter");
-    let unfinishedCounter = document.querySelector('.unfinished-counter');
-    let notDone = document.querySelector('.not-done-counter');
+    let dayValue = document.getElementById('day-week-value');
+    let dayNumberValue = document.getElementById('day-number-value');
+   const seg = document.getElementById('seg');
+   const ter =   document.getElementById('ter');
+   const qua =  document.getElementById('qua');
+   const qui =  document.getElementById('qui');
+   const sex =  document.getElementById('sex');
+   const sab =   document.getElementById('sab');
+   const dom =  document.getElementById('dom');
 
-    const startButton = document.querySelector('.start-button');
-    const endButton = document.querySelector('.end-button');  
-  
-const unfinishedButton = document.querySelector('.unfinished');
-  
-  const notDoneButton = document.querySelector('.not-done');
-  
-    startButton.addEventListener('click', () => {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0'); // Get hours (in 24-hour format) and pad with leading zero if necessary
-        const minutes = now.getMinutes().toString().padStart(2, '0'); // Get minutes and pad with leading zero if necessary
-        
-        startTime = `${hours}:${minutes}`;
-        
-        console.log('Start at:', startTime);
+   
 
-       const field = document.querySelector('.check-negative');
-            field.style.backgroundColor = 'blue';
-            field.style.borderColor = 'blue';
-    });
-         
-      endButton.addEventListener('click', () => {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0'); // Get hours (in 24-hour format) and pad with leading zero if necessary
-        const minutes = now.getMinutes().toString().padStart(2, '0'); // Get minutes and pad with leading zero if necessary
-        
-       endTime = `${hours}:${minutes}`;
-        
-        console.log('End at:', endTime);
-        
-            
-        
-           console.log(`you started at ${startTime} and finished at ${endTime}`);
-     
-        doneCounter.textContent = '1 terminado';
-        
-         const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'green';
-            field.style.borderColor = 'green';
-        
-          
-    });
-    
-    
-  unfinishedButton.addEventListener('click', () => {
-                                    console.log('unfinished clicked');                                   
-  
-      const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'orange';
-            field.style.borderColor = 'orange';
-        
-    
-  })
-  
+   const segCheck = document.querySelector('.seg-check');
+   const terCheck = document.querySelector('.ter-check');
+   const quaCheck = document.querySelector('.qua-check');
+   const quiCheck = document.querySelector('.qui-check');
+   const sexCheck = document.querySelector('.sex-check');
+   const sabCheck = document.querySelector('.sab-check');
+   const domCheck = document.querySelector('.dom-check');
 
-  notDoneButton.addEventListener('click', () => {
-                                    console.log('not done clicked');
-    const field = document.querySelector('.check-negative');  field.style.backgroundColor = 'darkred';
-            field.style.borderColor = 'darkred';
-        
-  })
-  
-  
-});
+
+
+   const startButton = document.getElementById('start-button');
+   const endButton = document.getElementById('end-button')
+   const unfinishedButton = document.getElementById('unfinished')
+   const notDoneButton = document.getElementById('not-done');
+
+   startButton.addEventListener("click", () => {
+    
+    dayValueRaw = dayValue.value;
+    
+
+    if (dayValueRaw === 'seg') {
+        segCheck.style.backgroundColor = 'blue';
+
+    }
+    
+    else if (dayValueRaw === 'ter') {
+        terCheck.style.backgroundColor = 'blue';
+    }
+
+    else if (dayValueRaw === 'qua') {
+        quaCheck.style.backgroundColor = 'blue';
+    }
+
+    else if (dayValueRaw === 'qui') {
+        quiCheck.style.backgroundColor = 'blue';
+    }
+
+    else if (dayValueRaw === 'sex') {
+        sexCheck.style.backgroundColor = 'blue';
+    }
+
+    else if (dayValueRaw === 'sab') {
+        sabCheck.style.backgroundColor = 'blue';
+    }
+
+    else if (dayValueRaw === 'dom') {
+        sabCheck.style.backgroundColor = 'blue';
+    }
+
+    else {
+        alert('not valid');
+    } 
+
+
+   }) // end of start listener
+
+   endButton.addEventListener("click", () => {
+    
+    dayValueRaw = dayValue.value;
+
+    if (dayValueRaw === 'seg') {
+        segCheck.style.backgroundColor = 'blue';
+    }
+    
+    if (dayValueRaw === 'seg') {
+        segCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'ter') {
+        terCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'qua') {
+        quaCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'qui') {
+        quiCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'sex') {
+        sexCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'sab') {
+        sabCheck.style.backgroundColor = 'green';
+    }
+    
+    else if (dayValueRaw === 'dom') {
+        sabCheck.style.backgroundColor = 'green';
+    }
+    
+
+   }) // end of end listener
+
+
+   unfinishedButton.addEventListener("click", () => {
+    
+    dayValueRaw = dayValue.value;
+
+    if (dayValueRaw === 'seg') {
+        segCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'ter') {
+        terCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'qua') {
+        quaCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'qui') {
+        quiCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'sex') {
+        sexCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'sab') {
+        sabCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else if (dayValueRaw === 'dom') {
+        sabCheck.style.backgroundColor = 'yellow';
+    }
+    
+    else {
+        alert('not valid');
+    }
+
+
+   }) // end of unfinished listener
+
+   notDoneButton.addEventListener("click", () => {
+    
+    dayValueRaw = dayValue.value;
+
+    if (dayValueRaw === 'seg') {
+        segCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'ter') {
+        terCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'qua') {
+        quaCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'qui') {
+        quiCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'sex') {
+        sexCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'sab') {
+        sabCheck.style.backgroundColor = 'red';
+    }
+    
+    else if (dayValueRaw === 'dom') {
+        sabCheck.style.backgroundColor = 'red';
+    }
+    
+
+   }) // end of not done listener
+
+
+
+})
