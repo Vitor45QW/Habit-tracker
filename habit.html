@@ -4,133 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>habit tracker</title>
     <link rel="stylesheet" href="habit.css">
 </head>
 <body>
   
   <div class="app-title">
-  <h1>My</h1>
-  <h2>Habit tracker</h2>
+  <h2>My Habit tracker</h2>
   </div>
   
   <div> 
-    <h2 class="habit-title">Yoga</h2>
+   
     
-     <h2>Done:</h2>
-    <p class="done-counter"></p>
+    <div class="buttons-container">
 
- <h2>Unfinished:</h2>
-    <p class="unfinished-counter"></p>
-    
- <h2>Not done:</h2>
-    <p class="not-done-counter"></p>
-    
-
-
-    <div class="week-counter">
-      <div class="day-and-check">
-      <p>Seg</p>
-      <h3 class="check-negative"></h3>
-        <div class="buttons-container">
-      <button class="start-button">Start</button>
-      <button class="end-button">End</button>
-              <button class="unfinished">Unfinished</button>
-              
-          <button class="not-done">Not done</button>
+      <div class="input-1">
+      <h2 class="dunno">Put the name of the day you're executing your habit/action</h2>
+      <input id="day-week-value" type="text" placeholder="Example: seg, ter, qua">
       </div>
+
+    
+
+      <button id="start-button">Start</button>
+      <button id="end-button">Done</button>
+              <button id="unfinished">Unfinished</button>
+              
+         
+                
+            <button id="not-done">Not done</button>
+        </div>
+        <h2 class="habit-title">Study</h2> 
+    <div class="week-counter">
+
+      <div id="seg">
+      
+      <p id="date">Date:</p>
+      <p id="seg-date">1</p>
+
+      <p>Day of the week:</p>
+      <p class="day-style">Seg</p>
+      <p id="status">Status</p>
+      <h3 class="seg-check"></h3>
+       
+        <p id="time">Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+
+
+    <div id="ter">
+      <p>Ter</p>
+      <h3 class="ter-check"></h3>
+       
+        <p>Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+
+    <div id="qua">
+      <p>Qua</p>
+      <h3 class="qua-check"></h3>
+       
         <p>Time spent</p>
         <p class="time-spent"></p>
     </div>
       
-      <div class="day-and-check">
-      <p>Ter</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Qua</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
+    <div id="qui">
       <p>Qui</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
+      <h3 class="qui-check"></h3>
+       
+        <p>Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+
+    <div id="sex">
       <p>Sex</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
+      <h3 class="sex-check"></h3>
+       
+        <p>Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+
+    <div id="sab">
       <p>Sab</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
+      <h3 class="sab-check"></h3>
+       
+        <p>Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+    <div id="dom">
       <p>Dom</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="maestry-container">
-      <h1 class="maestry">Maestry level</h1>
-				<h2>Extremely low</h2>
-				<h3 class="red-light"></h3>
+      <h3 class="dom-check"></h3>
+       
+        <p>Time spent</p>
+        <p class="time-spent"></p>
+    </div>
+
+    
       </div>
     </div>
 		
 
  
 
-  <div> 
-    <h2 class="habit-title">Study</h2>
-    
-    <div class="week-counter">
-      
-      <div class="day-and-check">
-      <p>Seg</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Ter</p>
-      <h3 class="check-positive"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Qua</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Qui</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Sex</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Sab</p>
-      <h3 class="check-negative"></h3>
-      </div>
-      
-      <div class="day-and-check">
-      <p>Dom</p>
-      <h3 class="check-negative"></h3>
-        
-      </div>
       
       
-      
-    </div>
-  </div>
+   
   
-  <script src="index.js"></script>
+  <script src="habit.js"></script>
   </body>
+</html>
+ 
 </html>
   
   <script src="index.js"></script>
