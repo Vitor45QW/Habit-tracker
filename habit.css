@@ -7,23 +7,59 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  scroll-behavior: smooth;
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+  height: 400vh;
+
 }
 
+.input-1{
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 15px;
+}
+
+.day-style{
+  background-color: lightcoral;
+}
+
+.input-2{
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 15px;
+}
+
+#day-week-value {
+  padding: 15px;
+  border-radius: 30px;
+}
+
+#day-number-value {
+  padding: 15px;
+  border-radius: 30px;
+}
 .app-title {
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
+  margin-right: 50px;
 }
 
-.app-title h1 {
-  font-size: 48px;
-  margin: 0;
-}
 
-.app-title h2 {
-  font-size: 32px;
-  margin: 0;
-}
+
 
 .habit-title {
   color: #fff;
@@ -40,22 +76,106 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+
 }
 
-.day-and-check {
-  text-align: center;
+#seg-date{
+  margin: 20px;
+  border-left: solid 1px grey;
+  padding: 10px;
 }
 
-.day-and-check p {
+#time {
+  margin: 30px;
+  border-left: solid 1px grey;
+  padding: 10px;
+}
+
+#status{
+  margin: 30px;
+  border-left: solid 1px grey;
+  padding: 10px;
+}
+
+.day-style{
+  margin: 40px;
+  background-color: pink;
+  padding: 30px;
+  border-radius: 30px;
+
+}
+
+#seg{
   margin: 0;
-  font-size: 18px;
+  font-size: 30px;
   color: #333;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  
+
+  
+  align-items: center; /* Center items vertically if needed */
+  padding: 20px; /* Optional: Add padding around the container */
+  box-sizing: border-box; /* Ensure padding is included in total width */
+
 }
 
-.check-neutral, .check-negative, .check-positive {
+#ter{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+#qua{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+#qui{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+#sex{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+#sab{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+#dom{
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+.seg-check{
   width: 50px;
   height: 50px;
   margin: 10px auto;
@@ -64,27 +184,92 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  color: #fff;
+  background-color: grey;
   border: 2px solid transparent;
 }
 
-.check-neutral {
-  background-color: #fff;
-  border-color: #333;
-  color: #333;
+.ter-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
 }
 
-.check-negative {
-  background-color: #e74c3c;
-  border-color: #e74c3c;
+.qua-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
 }
 
-.check-positive {
-  background-color: #2ecc71;
-  border-color: #2ecc71;
+.qui-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
 }
 
-.button-done, .button-undone {
+.sex-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
+}
+
+.sab-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
+}
+
+.dom-check{
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: grey;
+  border: 2px solid transparent;
+}
+
+
+
+
+#button-done, #button-undone {
   display: block;
   margin: 5px auto;
   padding: 5px 10px;
@@ -95,7 +280,7 @@ body {
   cursor: pointer;
 }
 
-.button-done:hover, .button-undone:hover {
+#button-done:hover, #button-undone:hover {
   background-color: #555;
 }
 
@@ -120,12 +305,12 @@ body {
 
 .buttons-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 10px;
   margin: 10px;
 }
 
-.start-button{
+#start-button{
   border-radius: 1000px;
   padding: 10px;
   background-color: blue;
@@ -133,7 +318,7 @@ body {
   margin: 13px;
 }
 
-.unfinished{
+#unfinished{
   border-radius: 1000px;
   padding: 10px;
   background-color: orange;
@@ -141,7 +326,7 @@ body {
   margin: 13px;
 }
 
-.end-button{
+#end-button{
   border-radius: 1000px;
   padding: 10px;
   background-color: green;
@@ -149,20 +334,16 @@ body {
   margin: 13px;
 }
 
-.end-button{
-  border-radius: 1000px;
-  padding: 10px;
-  background-color: green;
-  color: white;
-  margin: 13px;
-}
 
-.not-done{
+
+#not-done{
   border-radius: 1000px;
   padding: 10px;
   background-color: darkred;
   color: white;
   margin: 13px;
 }
+
+
 
 
