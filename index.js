@@ -26,10 +26,28 @@ document.addEventListener("DOMContentLoaded", () => {
    const unfinishedButton = document.getElementById('unfinished')
    const notDoneButton = document.getElementById('not-done');
 
+
+   function collectTimeAndDate(buttonName) {
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth() + 1; 
+    const year = now.getFullYear();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    console.log(`${buttonName} button was clicked on ${day}/${month}/${year} at ${hours}:${minutes}`);
+}
+
+
+
+
+
+
    startButton.addEventListener("click", () => {
     
     dayValueRaw = dayValue.value;
+    collectTimeAndDate('Start')
     
+
 
     if (dayValueRaw === 'seg') {
         segCheck.style.backgroundColor = 'blue';
@@ -70,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
    endButton.addEventListener("click", () => {
     
     dayValueRaw = dayValue.value;
+    collectTimeAndDate('end')
 
     if (dayValueRaw === 'seg') {
         segCheck.style.backgroundColor = 'blue';
@@ -110,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
    unfinishedButton.addEventListener("click", () => {
     
     dayValueRaw = dayValue.value;
+    collectTimeAndDate('unfinished')
 
     if (dayValueRaw === 'seg') {
         segCheck.style.backgroundColor = 'yellow';
