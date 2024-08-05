@@ -27,15 +27,31 @@ document.addEventListener("DOMContentLoaded", () => {
    const notDoneButton = document.getElementById('not-done');
 
 
-   function collectTimeAndDate(buttonName) {
+   function collectTimeAndDateStart(buttonName) {
     const now = new Date();
     const day = now.getDate();
     const month = now.getMonth() + 1; 
     const year = now.getFullYear();
     const hours = now.getHours();
     const minutes = now.getMinutes();
-    console.log(`${buttonName} button was clicked on ${day}/${month}/${year} at ${hours}:${minutes}`);
-}
+    const message = (`${buttonName}  on ${day}/${month}/${year} at ${hours}:${minutes}`);
+    const timeSpentStart = document.querySelector(".start-time");
+     
+    timeSpentStart.textContent = message;
+   }
+
+ function collectTimeAndDateEnd(buttonName) {
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth() + 1; 
+    const year = now.getFullYear();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const message = (`${buttonName}  on ${day}/${month}/${year} at ${hours}:${minutes}`);
+    const timeSpentEnd = document.querySelector(".end-time");
+     
+    timeSpentEnd.textContent = message;
+   }
 
 
 
@@ -45,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
    startButton.addEventListener("click", () => {
     
     dayValueRaw = dayValue.value;
-    collectTimeAndDate('Start')
+    collectTimeAndDateStart('Start')
     
 
 
@@ -88,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
    endButton.addEventListener("click", () => {
     
     dayValueRaw = dayValue.value;
-    collectTimeAndDate('end')
+    collectTimeAndDateEnd('end')
 
     if (dayValueRaw === 'seg') {
         segCheck.style.backgroundColor = 'blue';
